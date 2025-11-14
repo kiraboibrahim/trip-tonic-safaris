@@ -78,7 +78,7 @@ const packages: Package[] = [
 
 const PackagesSection = () => {
     return (
-        <div className="container-fluid py-5">
+        <div className="container-fluid py-5" id="packages">
             <div className="container pt-5 pb-3 text-center">
                 <h6 className="text-primary text-uppercase" style={{ letterSpacing: 5 }}>Packages</h6>
                 <h1>Perfect Tour Packages</h1>

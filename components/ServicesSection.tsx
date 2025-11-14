@@ -7,13 +7,13 @@ import {
 
 const ServicesSection = () => {
     const services = [
-        { icon: faRoute, title: "Travel Guide" },
-        { icon: faTicketAlt, title: "Ticket Booking" },
-        { icon: faHotel, title: "Hotel Booking" },
+        { icon: faRoute, title: "Travel Guide", description: "Expert guides to lead you through Uganda's national parks and hidden gems." },
+        { icon: faTicketAlt, title: "Ticket Booking", description: "Seamless booking for safaris, park entries, and adventure activities." },
+        { icon: faHotel, title: "Hotel Booking", description: "Handpicked luxury lodges and accommodations for an unforgettable stay." },
     ];
 
     return (
-        <div className="container-fluid py-5">
+        <div className="container-fluid py-5" id="services">
             <div className="container pt-5 pb-3 text-center">
                 <h6 className="text-primary text-uppercase" style={{ letterSpacing: 5 }}>Services</h6>
                 <h1>Tours & Travel Services</h1>
@@ -28,8 +28,7 @@ const ServicesSection = () => {
                                 />
                                 <h5 className="mb-2">{s.title}</h5>
                                 <p className="m-0">
-                                    Justo sit justo eos amet tempor amet clita amet ipsum eos elitr.
-                                    Amet lorem est amet labore
+                                    {s.description}
                                 </p>
                             </div>
                         </div>

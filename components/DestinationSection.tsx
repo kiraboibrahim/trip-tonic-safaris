@@ -47,7 +47,7 @@ const destinations: Destination[] = [
 ];
 
 const DestinationSection = () => (
-    <div className="container-fluid py-5">
+    <div className="container-fluid py-5" id="destinations">
         <div className="container pt-5 pb-3 text-center">
             <h6 className="text-primary text-uppercase" style={{ letterSpacing: 5 }}>Destination</h6>
             <h1>Explore Top Destinations in Uganda</h1>

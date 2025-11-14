@@ -65,7 +65,7 @@ const settings = {
 };
 
 const TestimonialSection = () => (
-    <div className="container-fluid py-5">
+    <div className="container-fluid py-5" id="testimonials">
         <div className="container py-5 text-center">
             <h6 className="text-primary text-uppercase" style={{ letterSpacing: 5 }}>Testimonial</h6>
             <h1>What Our Clients Say</h1>

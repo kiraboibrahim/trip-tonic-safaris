@@ -1,8 +1,15 @@
+import Link from "next/link";
 import { useState } from "react";
 
 const Navbar = () => {
     const [open, setOpen] = useState(false);
-    const links = ["Home", "About", "Services", "Tour Packages", "Contact"];
+    const links = [
+        { label: "Home", href: "/" },
+        { label: "About", href: "#about" },
+        { label: "Gallery", href: "#gallery" },
+        { label: "Services", href: "#services" },
+        { label: "Tour Packages", href: "#packages" },
+    ];
 
     return (
         <div className="container-fluid position-relative nav-bar p-0">
@@ -33,13 +40,13 @@ const Navbar = () => {
                     >
                         <div className="navbar-nav ml-auto py-0">
                             {links.map((item) => (
-                                <a
-                                    key={item}
-                                    href="#"
-                                    className={`nav-item nav-link ${item === "Home" ? "active" : ""}`}
+                                <Link
+                                    key={item.label}
+                                    href={item.href}
+                                    className={`nav-item nav-link ${item.label === "Home" ? "active" : ""}`}
                                 >
-                                    {item}
-                                </a>
+                                    {item.label}
+                                </Link>
                             ))}
                         </div>
                     </div>

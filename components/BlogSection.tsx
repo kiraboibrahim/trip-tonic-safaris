@@ -32,7 +32,7 @@ const blogPosts: BlogPost[] = [
 ];
 
 const BlogSection = () => (
-    <div className="container-fluid py-5">
+    <div className="container-fluid py-5" id="blog">
         <div className="container pt-5 pb-3 text-center">
             <h6 className="text-primary text-uppercase" style={{ letterSpacing: 5 }}>Our Blog</h6>
             <h1>Latest From Our Blog</h1>

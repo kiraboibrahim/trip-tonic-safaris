@@ -18,6 +18,7 @@ import TestimonialSection from "@/components/TestimonialSection";
 import BlogSection from "@/components/BlogSection";
 import Footer from "@/components/Footer";
 import Gallery from "@/components/Gallery";
+import BackToTopFAB from "@/components/BackToTop";
 
 const fadeUp: Variants = {
     hidden: { opacity: 0, y: 20 },
@@ -70,6 +71,7 @@ export default function Home() {
                     {Section}
                 </motion.div>
             ))}
+            <BackToTopFAB />
         </>
     );
 }

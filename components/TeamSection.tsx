@@ -16,7 +16,7 @@ const TeamSection = () => {
     };
 
     return (
-        <div className="container-fluid py-5">
+        <div className="container-fluid py-5" id="team">
             <div className="container pt-5 pb-3 text-center">
                 <h6 className="text-primary text-uppercase" style={{ letterSpacing: 5 }}>Guides</h6>
                 <h1>Our Travel Guides</h1>

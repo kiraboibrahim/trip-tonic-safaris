@@ -20,7 +20,7 @@ export default function Gallery() {
     const [selected, setSelected] = useState<GalleryImage | null>(null);
 
     return (
-        <>
+        <div id="gallery">
             {/* Page Header */}
             <div className="container mx-auto px-4 py-10">
                 <h1 className="text-4xl font-bold text-center mb-8">
@@ -84,6 +84,6 @@ export default function Gallery() {
                     </div>
                 </div>
             )}
-        </>
+        </div>
     );
 }

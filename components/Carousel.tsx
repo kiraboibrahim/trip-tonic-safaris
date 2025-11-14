@@ -12,28 +12,28 @@ export const slides: Slide[] = [
         img: "/img/carousel-1.jpeg",
         title: "Encounter Majestic Giraffes in the Wild",
         description: "Get up close with Uganda's graceful giants at Murchison Falls National Park. A safari experience you will never forget!",
-        link: "#",
+        link: "#special-offer",
     },
     {
         id: 2,
         img: "/img/carousel-2.jpeg",
         title: "Luxurious Stays & Sunset Dinners",
         description: "Relax in top-notch hotels as you enjoy breathtaking sunsets and delicious local cuisine along Lake Victoria or in Kampala.",
-        link: "#",
+        link: "#special-offer",
     },
     {
         id: 3,
         img: "/img/carousel-3.jpeg",
         title: "Witness Elephants at Sunset",
         description: "Experience the thrill of watching majestic elephants roam the savannah during golden hour at Queen Elizabeth National Park.",
-        link: "#",
+        link: "#special-offer",
     },
     {
         id: 5,
         img: "/img/carousel-5.jpeg",
         title: "Breathtaking African Sunsets",
         description: "Marvel at iconic acacia trees silhouetted against dramatic Ugandan sunsets. Perfect moments for photography and reflection.",
-        link: "#",
+        link: "#special-offer",
     },
 ];
 
@@ -97,7 +97,7 @@ const Carousel: React.FC = () => {
                                     {slide.title}
                                 </h1>
                                 <Link
-                                    href="#"
+                                    href={slide.link || "#special-offer"}
                                     className="btn btn-primary py-md-3 px-md-5 mt-2"
                                     style={{
                                         transition: 'all 0.3s ease',
