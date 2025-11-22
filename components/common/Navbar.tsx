@@ -39,8 +39,28 @@ const Navbar = () => {
     const handleDropdownToggle = (dropdown: string) => {
         if (dropdown === "safaris") {
             setSafarisOpen(!safarisOpen);
+            setServicesOpen(false);
         } else if (dropdown === "services") {
             setServicesOpen(!servicesOpen);
+            setSafarisOpen(false);
+        }
+    };
+
+    const openDropdown = (dropdown: string) => {
+        if (dropdown === "safaris") {
+            setSafarisOpen(true);
+            setServicesOpen(false);
+        } else if (dropdown === "services") {
+            setServicesOpen(true);
+            setSafarisOpen(false);
+        }
+    };
+
+    const closeDropdown = (dropdown: string) => {
+        if (dropdown === "safaris") {
+            setSafarisOpen(false);
+        } else if (dropdown === "services") {
+            setServicesOpen(false);
         }
     };
 
@@ -86,13 +106,13 @@ const Navbar = () => {
                                     key={item.label}
                                     className="relative group"
                                     onMouseEnter={() => {
-                                        if (item.dropdown && window.innerWidth >= 992) {
-                                            handleDropdownToggle(item.label === "Safaris" ? "safaris" : "services");
+                                        if (item.dropdown && typeof window !== 'undefined' && window.innerWidth >= 992) {
+                                            openDropdown(item.label === "Safaris" ? "safaris" : "services");
                                         }
                                     }}
                                     onMouseLeave={() => {
-                                        if (item.dropdown && window.innerWidth >= 992) {
-                                            handleDropdownToggle(item.label === "Safaris" ? "safaris" : "services");
+                                        if (item.dropdown && typeof window !== 'undefined' && window.innerWidth >= 992) {
+                                            closeDropdown(item.label === "Safaris" ? "safaris" : "services");
                                         }
                                     }}
                                 >
@@ -100,7 +120,7 @@ const Navbar = () => {
                                     {item.dropdown ? (
                                         <button
                                             onClick={() => {
-                                                if (window.innerWidth < 992) {
+                                                if (typeof window !== 'undefined' && window.innerWidth < 992) {
                                                     handleDropdownToggle(item.label === "Safaris" ? "safaris" : "services");
                                                 }
                                             }}
@@ -128,7 +148,7 @@ const Navbar = () => {
                                     {/* Dropdown Menu */}
                                     {item.dropdown && (
                                         <div
-                                            className={`${(item.label === "Safaris" && safarisOpen) || (item.label === "Other Services" && servicesOpen) ? "block opacity-100" : "hidden opacity-0"} lg:absolute lg:top-full lg:left-0 lg:min-w-[10rem] lg:bg-white lg:shadow-[0_0.125rem_0.25rem_rgba(0,0,0,0.075)] lg:border lg:border-[rgba(0,0,0,0.15)] transition-all duration-200 ease-in-out`}
+                                            className={`${(item.label === "Safaris" && safarisOpen) || (item.label === "Other Services" && servicesOpen) ? "block opacity-100" : "hidden opacity-0"} lg:absolute lg:top-full lg:left-0 lg:min-w-[15rem] lg:bg-white lg:shadow-[0_0.125rem_0.25rem_rgba(0,0,0,0.075)] lg:border lg:border-[rgba(0,0,0,0.15)] transition-all duration-200 ease-in-out`}
                                             style={{ zIndex: 1000 }}
                                         >
                                             {item.dropdown.map((subItem) => (
@@ -136,7 +156,7 @@ const Navbar = () => {
                                                     key={subItem.label}
                                                     href={subItem.href}
                                                     onClick={closeMobileMenu}
-                                                    className="block w-full py-[0.25rem] px-6 clear-both font-normal text-[#212529] whitespace-nowrap bg-transparent border-0 hover:bg-[#f8f9fa] hover:text-[#16181b] hover:no-underline transition-colors duration-150"
+                                                    className="block w-full py-[0.5rem] px-6 clear-both font-normal text-[#212529] whitespace-nowrap bg-transparent border-0 hover:bg-[#f8f9fa] hover:text-[#16181b] hover:no-underline transition-colors duration-150"
                                                 >
                                                     {subItem.label}
                                                 </Link>
