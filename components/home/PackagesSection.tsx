@@ -78,13 +78,13 @@ const PackagesSection = () => {
                         <div key={pkg.id} className="lg:w-1/3 md:w-1/2 w-full px-[15px] mb-4">
                             <div className="bg-white mb-2 transition-[box-shadow_0.5s] shadow-[0_0_30px_#CCCCCC]">
                                 <img
-                                    className="max-w-full h-auto"
+                                    className="w-full h-[250px] object-cover"
                                     src={pkg.image}
                                     alt={pkg.title}
                                 />
                                 <div className="p-4">
                                     <div className="flex justify-between mb-3">
-                                        <small className="text-[80%] font-normal">
+                                        <small className="text-[80%] font-normal truncate max-w-[35%]" title={pkg.location}>
                                             <FontAwesomeIcon icon={faMapMarkerAlt} className="text-[#7AB730] mr-2" />
                                             {pkg.location}
                                         </small>
@@ -97,7 +97,7 @@ const PackagesSection = () => {
                                             {pkg.people}
                                         </small>
                                     </div>
-                                    <a className="text-[1.25rem] font-medium leading-[1.2] text-[#212121] no-underline hover:text-[#7AB730]" href="#">
+                                    <a className="block text-[1.25rem] font-medium leading-[1.2] text-[#212121] no-underline hover:text-[#7AB730] h-[3.6rem] overflow-hidden" href="#" title={pkg.title}>
                                         {pkg.title}
                                     </a>
                                     <div className="border-t border-[rgba(0,0,0,0.1)] mt-4 pt-4 flex justify-between">

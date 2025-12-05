@@ -86,8 +86,9 @@ const BlogSection = () => (
                                 <a
                                     className="text-xl font-medium m-0 no-underline text-[#212121] hover:text-[#7AB730] transition-colors block leading-[1.2]"
                                     href={post.link}
+                                    title={post.title}
                                 >
-                                    {post.title}
+                                    <p className="line-clamp-1" title={post.title}>{post.title}</p>
                                 </a>
                             </div>
                         </div>

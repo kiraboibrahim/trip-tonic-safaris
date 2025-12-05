@@ -34,7 +34,7 @@ const teamMembers: TeamMember[] = [
         designation: "Director"
     },
     {
-        name: "Mr. Karitwe Abdu",
+        name: "Mr. Kalitwe Abdu",
         socials: {
             facebook: "",
             linkedin: "",
