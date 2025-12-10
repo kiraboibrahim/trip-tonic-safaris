@@ -153,6 +153,8 @@ const TenDaysSafari = () => {
         const printContent = document.getElementById('safari-content');
         const originalContent = document.body.innerHTML;
 
+        if (!printContent) return;
+
         document.body.innerHTML = printContent.innerHTML;
         window.print();
         document.body.innerHTML = originalContent;
@@ -214,10 +216,10 @@ const TenDaysSafari = () => {
                 <div className="bg-white rounded-lg shadow-md p-8 mb-8">
                     <h2 className="text-2xl font-bold text-[#212121] mb-4">Safari Overview</h2>
                     <p className="text-gray-600 leading-relaxed mb-4">
-                        Experience the complete Pearl of Africa with our comprehensive 10-day safari adventure. This signature journey takes you through Uganda's most spectacular national parks, from the thundering Murchison Falls to the misty mountains of Bwindi where mountain gorillas roam. Trek with chimpanzees in Kibale Forest, cruise alongside hippos on the Kazinga Channel, discover the unique hot springs of Semliki, and search for tree-climbing lions in Ishasha.
+                        Experience the complete Pearl of Africa with our comprehensive 10-day safari adventure. This signature journey takes you through Uganda&lsquo;s most spectacular national parks, from the thundering Murchison Falls to the misty mountains of Bwindi where mountain gorillas roam. Trek with chimpanzees in Kibale Forest, cruise alongside hippos on the Kazinga Channel, discover the unique hot springs of Semliki, and search for tree-climbing lions in Ishasha.
                     </p>
                     <p className="text-gray-600 leading-relaxed">
-                        This expertly crafted itinerary balances thrilling wildlife encounters with cultural immersion, active adventures with comfortable accommodations. You'll explore diverse ecosystems, from tropical rainforests to savannah plains, encounter both mountain gorillas and chimpanzees, and experience the warm hospitality of Uganda. This is more than a safari – it's a transformative journey through one of Africa's most beautiful and biodiverse countries.
+                        This expertly crafted itinerary balances thrilling wildlife encounters with cultural immersion, active adventures with comfortable accommodations. You&lsquo;ll explore diverse ecosystems, from tropical rainforests to savannah plains, encounter both mountain gorillas and chimpanzees, and experience the warm hospitality of Uganda. This is more than a safari – it&lsquo;s a transformative journey through one of Africa&lsquo;s most beautiful and biodiverse countries.
                     </p>
                 </div>
 
