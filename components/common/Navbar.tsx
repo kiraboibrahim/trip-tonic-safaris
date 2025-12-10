@@ -17,9 +17,9 @@ const Navbar = () => {
             label: "Safaris",
             href: "#safaris",
             dropdown: [
+                { label: "Ten Days Safari", href: "/safaris/ten-days-safari" },
                 { label: "Three Days Gorilla Tracking", href: "/safaris/three-days-gorilla-tracking" },
                 { label: "Six Days of Gorilla Tracking and Chimp Tracking", href: "/safaris/six-days-gorilla-chimp-tracking" },
-                { label: "Eight Days Safari", href: "/safaris/eight-days-safari" },
             ],
         },
         {
